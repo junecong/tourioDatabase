@@ -8,6 +8,9 @@ from json import dumps
 db = sqlite3.connect('tourio.db')
 c = db.cursor()
 
+@route('/')
+    print Hi Prud
+
 #get all comments for this tour
 @route('/comments/<tourIdGiven>', method='GET')
 def get_comments_for_tour(tourIdGiven):
