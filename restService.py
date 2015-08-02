@@ -10,7 +10,7 @@ c = db.cursor()
 
 @route('/')
 def basic_function():
-    print Hi Prud
+    print "Hi Prud"
 
 #get all comments for this tour
 @route('/comments/<tourIdGiven>', method='GET')
