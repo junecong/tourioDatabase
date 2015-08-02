@@ -81,7 +81,7 @@ def get_tour(tourIdGiven):
 
     tour.append(userDetails)
 
-    c.execute('SELECT lat,long,TourIndex FROM stops WHERE TourID = (?) ORDER BY TourIndex ASC', (tourIdGiven,))
+    c.execute('SELECT Name,TourIndex,Description,Lat,Long,Pic1,Category FROM stops WHERE TourID = (?) ORDER BY TourIndex ASC', (tourIdGiven,))
     stops = [dict((c.description[j][0], value) \
         for j, value in enumerate(row)) for row in c.fetchall()]
 
