@@ -4,7 +4,7 @@ import sqlite3
 db = sqlite3.connect('tourio.db')
 
 #Comments Table
-db.execute("CREATE TABLE tours (id INTEGER PRIMARY KEY, TourName TEXT, TourDescription TEXT, Rating INTEGER, Duration INTEGER, GuideID INTEGER, CityID INTEGER);")
+db.execute("CREATE TABLE tours (id INTEGER PRIMARY KEY, TourName TEXT, TourDescription TEXT, Rating INTEGER, Duration INTEGER, UserID INTEGER, CityID INTEGER);")
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Perfect SF Hipster Sunday', 'Spend some time in the more alternative parts of SF, like the Castro and Haight-Ashbury. Experience the hippie culture for yourself, and dont forget your Tartine pastry!', 5, 3, 1, 1)")
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Extreme SF', 'Who says you cant do outdoorsy things in a big city?', 5, 3, 1, 1)")
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Scenic Views and Picnic Foods', 'Check out the beautiful views of SF, like Sutro Baths, Lands End, and Crissy Field. In between, enjoy a picnic at Baker Beach', 4, 4, 1, 1)")
