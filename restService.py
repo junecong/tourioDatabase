@@ -9,6 +9,7 @@ db = sqlite3.connect('tourio.db')
 c = db.cursor()
 
 @route('/')
+def basic_function():
     print Hi Prud
 
 #get all comments for this tour
