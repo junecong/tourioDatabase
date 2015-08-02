@@ -58,9 +58,9 @@ def get_tours_by_city(cityIdGiven):
         listToAppend.append(i)
         listToAppend.append(stops)
 
-    if not tours:
-        abort(404, 'No document with id %s' % id)
-    c.close()
+    # if not tours:
+    #     abort(404, 'No document with id %s' % id)
+    # c.close()
 
     response.content_type = 'application/json'
     return json.dumps(listToAppend)
@@ -87,9 +87,9 @@ def get_tour(tourIdGiven):
 
     tour.append(stops)
 
-    if not tour:
-        abort(404, 'No document with id %s' % id)
-    c.close()
+    # if not tour:
+    #     abort(404, 'No document with id %s' % id)
+    # c.close()
 
     response.content_type = 'application/json'
     return json.dumps(tour)
