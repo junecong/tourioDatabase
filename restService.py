@@ -87,6 +87,21 @@ def get_tour(tourIdGiven):
 
     tour.append(stops)
 
+
+    c.execute('SELECT CommenterID,Comment,Rating,Time FROM comments WHERE TourID = (?) ORDER BY Time ASC', (tourIdGiven,))
+    comments = [dict((c.description[j][0], value) \
+        for j, value in enumerate(row)) for row in c.fetchall()]
+
+
+    for i in comments:
+        holder = i["CommenterID"]
+        c.execute('SELECT FirstName,LastName,imageUrl FROM users WHERE id = (?)', (holder,))
+        commenter = [dict((c.description[j][0], value) \
+        for j, value in enumerate(row)) for row in c.fetchall()]
+
+        tour.append(commenter)
+        tour.append(i)
+
     # if not tour:
     #     abort(404, 'No document with id %s' % id)
     # c.close()
