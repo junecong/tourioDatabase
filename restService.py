@@ -102,6 +102,9 @@ def get_tour(tourIdGiven):
         tour.append(commenter)
         tour.append(i)
 
+    # if not tour:
+    #     abort(404, 'No document with id %s' % id)
+    # c.close()
 
     response.content_type = 'application/json'
     return json.dumps(tour)
@@ -112,6 +115,9 @@ def get_user(userIdGiven):
     c.execute('SELECT FirstName,LastName,imageUrl,city FROM users WHERE id = (?)', (userIdGiven))
     user = [dict((c.description[i][0], value) \
         for i, value in enumerate(row)) for row in c.fetchall()]
+
+    # if not user:
+    #     abort(404, 'No document with id %s' % id)
 
     response.content_type = 'application/json'
     return json.dumps(user)

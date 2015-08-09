@@ -53,9 +53,9 @@ db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,C
 
 
 #Berkeley Tour
-db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (5, 'Campanile Views', 1, 'See the whole panoramic view of Berkeley from the top of the Campanile tower', 37.871349, -122.260853, 'http://www.berkeleyside.com/wp-content/uploads/2015/03/campanile_view1.jpg', 2)")
-db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (5, 'Doe Library Reading Room', 2, 'The reading room, or Morrison Library, is one of the most beautiful parts of Doe Library.', 37.872208, -122.259493, 'https://s-media-cache-ak0.pinimg.com/736x/44/c0/6c/44c06c6be4b34436d862f222ac2e9fef.jpg', 2)")
-db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (5, 'Grab a Coffee at FSM', 3, 'Students get tired studying all day, so make sure you grab a drink and a quick snack at the Free Speech Movement Cafe!', 37.874335, -122.262307, 'http://nickm.com/montfort_rettberg/implementation/2004-08-29/Berkeley_California__Free_Speech_Movement_Cafe_1a.jpg', 4)")
+db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (5, 'Campanile Views', 1, 'See the whole panoramic view of Berkeley from the top of the Campanile tower', 37.871909, -122.257831, 'http://www.berkeleyside.com/wp-content/uploads/2015/03/campanile_view1.jpg', 2)")
+db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (5, 'Doe Library Reading Room', 2, 'The reading room, or Morrison Library, is one of the most beautiful parts of Doe Library.', 37.872562, -122.259644, 'https://s-media-cache-ak0.pinimg.com/736x/44/c0/6c/44c06c6be4b34436d862f222ac2e9fef.jpg', 2)")
+db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (5, 'Grab a Coffee at FSM', 3, 'Students get tired studying all day, so make sure you grab a drink and a quick snack at the Free Speech Movement Cafe!', 37.872137, -122.260985, 'http://nickm.com/montfort_rettberg/implementation/2004-08-29/Berkeley_California__Free_Speech_Movement_Cafe_1a.jpg', 4)")
 
 
 # Testing
