@@ -51,7 +51,7 @@ def get_tours_by_city(cityIdGiven):
 
     for i in tours:
         holderID = i["id"]
-        c.execute('SELECT lat,long,TourIndex FROM stops WHERE TourID = (?) ORDER BY TourIndex ASC', (holderID,))
+        c.execute('SELECT lat,long,TourIndex,Pic1 FROM stops WHERE TourID = (?) ORDER BY TourIndex ASC', (holderID,))
         stops = [dict((c.description[j][0], value) \
         for j, value in enumerate(row)) for row in c.fetchall()]
 
