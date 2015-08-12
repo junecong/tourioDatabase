@@ -21,7 +21,7 @@ db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,C
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Chi-town Low Dow', 'Get the low down on the best town around', 5, 3, 1, 3)")
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Chicago Art Walk', 'With the Art Institute, MCA, The Picasso, and everything else, Chicago has one of the best art scenes around. Learn more in this tour through the city.', 5, 2, 1, 3)")
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Midwest Feel in a Big City Town', 'Just because Chicago is a big city doesnt mean were not still in the Midwest. These are some of the nicest places to go in the city.', 3, 4, 1, 3)")
-db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Chicago Financial District Food Tour', 'Traditional American. Asian Fusion. Italian Pasta. Mediterranean.', 4, 10, 1, 3)")
+db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Chicago Financial District', 'Chicago is well known for its financial district. Take a walk in one of the worlds biggest financial district!', 4, 10, 1, 3)")
 
 
 # Users Table
@@ -90,11 +90,9 @@ db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,C
 db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (11, 'Lyric Opera of Chicago', 2, 'The Lyric Opera of Chicago offers a full opera season, from October to March, with well known classics. It began in 1954 and is today world-renowned.', 41.882328, -87.637609, 'https://welltempered.files.wordpress.com/2011/02/lyric-opera-of-chicago-1.jpg', 4)")
 db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (11, 'Willis Tower SkyDeck', 3,'Until 1996, when the Petronas Towers were built in Kuala Lumpur, the 110 story Sears Tower, now Willis Tower, was the worlds tallest office block. While there are now several taller buildings, the view from here is incredible. On a clear day you can see 40 to 50 miles over four states, and gain a birds eye view of Chicagos impressive architecture. The Willis Tower took three years to build and was opened to the public in 1974. The building is 1,453 feet tall with an observation area, called the SkyDeck, on the 103rd floor, 1,353 feet above the ground. A glass box with a glass floor, known as the Ledge, juts out from the SkyDeck, where visitors can stand and look directly down at the city below.', 41.879011, -87.636040, 'http://www.inetours.com/Chicago/images/Arch/Ledge_4021.jpg', 4)")
 
-db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (12, 'Saucy Porka', 1, 'Try their Rice Bowl', 41.876909, -87.633220, 'http://chicago.seriouseats.com/images/2013/06/060213-254411-lunch-in-the-loop-saucy-porka-exterior.jpg', 2)")
-db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (12, 'Ceres Cafe', 1, 'Try any of their drinks!', 41.878106, -87.632190, 'http://media-cdn.tripadvisor.com/media/photo-s/07/8a/c0/f4/ceres-cafe.jpg', 2)")
-db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (12, 'The Florentine', 1, 'Try their mushroom pizza, kale salad, scallops and torta', 41.879645, -87.632874, 'http://www.e2hospitality.com/florentine-chicago/files/2011/03/Florentine_about.jpg', 2)")
-db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (12, 'BenjYehuda', 1, 'Try their Middle-Eastern Sandwich.', 41.879698, -87.633919, 'http://assets.dnainfo.com/generated/chicago_photo/2014/05/benjyehuda-1400544749.jpg/larger.jpg', 2)")
-
+db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (12, 'The Loop', 1, 'Although many believe the term The Loop comes from the elevated L trains that do indeed form a loop around the downtown area, the name actually comes from the route of a streetcar that served Chicago in 1882.', 41.884367, -87.628852, 'https://www.jcdrepair.com/assets/stores/loop-3e383688f323bbbcc8d91857992756fa.jpg', 2)")
+db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (12, 'Ipsento', 1, 'If you think Starbucks is good, this will change your mind!', 41.918867, -87.687257, 'http://chicago.grubstreet.com/20110606_ipsento_560x372.jpg', 2)")
+db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (12, 'DuSable Bridge', 1, 'Historic drawbridge with decorative work', 41.889046, -87.624368, 'http://historicbridges.org/truss/michiganavenue/little_p1160772_3_4_enhanced%202.jpg', 2)")
 
 # Comments Table
 db.execute("CREATE TABLE comments (id INTEGER PRIMARY KEY, TourID INTEGER, Comment TEXT, Rating INTEGER, Time INTEGER, CommenterID INTEGER);")
@@ -148,59 +146,59 @@ db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES
 
 
 ## More comments
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (1, 'Loved the tour.', 5, 201508050109, 1)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (1, 'Everything was fine. I just happened to take the tour during a bad weather.', 5, 201508010109, 2)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (1, 'The stops were a little too crowded, but the tour creator suggested good stops. Check it out!', 5, 201508040109, 3)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (1, 'Awesome tour.', 4, 201508020109, 4)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (1, 'I got a little tired. The walk between the stops were a little too long.', 3, 201508030109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (1, 'Loved the tour.', 5, 201508060109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (1, 'Everything was fine. I just happened to take the tour during a bad weather.', 5, 201508070109, 2)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (1, 'The stops were a little too crowded, but the tour creator suggested good stops. Check it out!', 5, 201508080109, 3)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (1, 'Awesome tour.', 4, 201508090109, 4)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (1, 'I got a little tired. The walk between the stops were a little too long.', 3, 201508060109, 1)")
 
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (2, 'Im new to SF and this tour made my day :)', 5, 1508050109, 4)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (2, 'Thanks for making an awesome tour.', 5, 201508010109, 5)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (2, 'The name tells it all.', 5, 201508040109, 1)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (2, 'Take this tour if you have the time. Its totally worth it!', 4, 201508020109, 3)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (2, 'Im new to SF and this tour made my day :)', 5, 1508060109, 4)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (2, 'Thanks for making an awesome tour.', 5, 201508070109, 5)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (2, 'The name tells it all.', 5, 201508080109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (2, 'Take this tour if you have the time. Its totally worth it!', 4, 201508090109, 3)")
 
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (3, 'Nice tour', 5, 201508050109, 2)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (3, 'I had to tip the maker of this tour. He totally put some time into making such an awesome tour.', 5, 201508040109, 3)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (3, 'Not the best tour in SF but a pretty good one.', 4, 201508020109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (3, 'Nice tour', 5, 201508060109, 2)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (3, 'I had to tip the maker of this tour. He totally put some time into making such an awesome tour.', 5, 201508070109, 3)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (3, 'Not the best tour in SF but a pretty good one.', 4, 201508080109, 1)")
 
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (4, 'This tour made my day.', 5, 201508040109, 3)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (4, 'I learned a lot about SF in this tour.', 4, 201508020109, 1)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (4, 'Nice tour. Good job, tour creator!', 3, 201508030109, 4)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (4, 'This tour made my day.', 5, 201508050109, 3)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (4, 'I learned a lot about SF in this tour.', 4, 201508060109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (4, 'Nice tour. Good job, tour creator!', 3, 201508070109, 4)")
 
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (5, 'I would highly recommend this tour.', 5, 201508040109, 3)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (5, 'This tour was a lot of fun. My friends and I were a group of 5 and this tour was exactly what we were looking for. We are from SoCal and we wanted to know more about the Berkeley campus, but we didnt want to take those campus tours that the university offers, because they just take too long. We even went up the Campanile!', 4, 201508020109, 1)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (5, 'After taking this tour, I wanna come study at Berkeley. High school senior here.', 3, 201508030109, 4)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (5, 'I would highly recommend this tour.', 5, 201508050109, 3)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (5, 'This tour was a lot of fun. My friends and I were a group of 5 and this tour was exactly what we were looking for. We are from SoCal and we wanted to know more about the Berkeley campus, but we didnt want to take those campus tours that the university offers, because they just take too long. We even went up the Campanile!', 4, 201508060109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (5, 'After taking this tour, I wanna come study at Berkeley. High school senior here.', 3, 201508070109, 4)")
 
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (6, 'Excellent.', 5, 201508040109, 3)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (6, 'Definitely check out this tour. The Chinese Historical Society of America Museum was pretty sick.', 4, 201508020109, 1)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (6, 'Love this tour more than the tour I took when I came to SF two years ago. This walking tour gave me the flexibility to skip stops that I didnt want to take, which allowed me to set the pace of the tour. Totally a great experience.', 3, 201508030109, 4)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (6, 'Excellent.', 5, 201508050109, 3)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (6, 'Definitely check out this tour. The Chinese Historical Society of America Museum was pretty sick.', 4, 201508060109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (6, 'Love this tour more than the tour I took when I came to SF two years ago. This walking tour gave me the flexibility to skip stops that I didnt want to take, which allowed me to set the pace of the tour. Totally a great experience.', 3, 201508070109, 4)")
 
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (7, 'We had sushi at the Japantown. This place has one of the best sushi I have ever had.', 5, 201508040109, 3)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (7, 'Took a long walk in the Chinatown. It was amazing. This tour makes me realize SF is so diverse.', 4, 201508020109, 1)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (7, 'The Japantown was awesome. Take this tour if you want to have great sushi.', 3, 201508030109, 4)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (7, 'We had sushi at the Japantown. This place has one of the best sushi I have ever had.', 5, 201508050109, 3)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (7, 'Took a long walk in the Chinatown. It was amazing. This tour makes me realize SF is so diverse.', 4, 201508060109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (7, 'The Japantown was awesome. Take this tour if you want to have great sushi.', 3, 201508070109, 4)")
 
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (8, 'I love the startup culture here.', 5, 201508040109, 3)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (8, 'Go Giants!', 4, 201508020109, 1)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (8, 'The AT&T Park Walk was an amazing experience.', 3, 201508030109, 4)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (8, 'I love the startup culture here.', 5, 201508050109, 3)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (8, 'Go Giants!', 4, 201508060109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (8, 'The AT&T Park Walk was an amazing experience.', 3, 201508070109, 4)")
 
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (9, 'Velvet tacos were amazing!', 5, 201508040109, 3)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (9, 'Cool tour', 4, 201508020109, 1)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (9, 'I skipped the second stop because it was a bit long. The tacos were amazing.', 3, 201508030109, 4)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (9, 'Velvet tacos were amazing!', 5, 201508050109, 3)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (9, 'Cool tour', 4, 201508060109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (9, 'I skipped the second stop because it was a bit long. The tacos were amazing.', 3, 201508070109, 4)")
 
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (10, 'Never knew Chicaco had such an art culture.', 5, 201508040109, 3)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (10, 'Ive been to many art places all around the US and this tour was pretty decent. I would recommend tour takers to not take too much time on each stop because you might miss the Dinner at Purple Pig. We almost missed it because we started the tour late, but we made it and it was one of the best!', 4, 201508020109, 1)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (10, 'The tour maker obviously has a different art taste from us. We didnt like the Art Institute.', 3, 201508030109, 4)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (10, 'Never knew Chicaco had such an art culture.', 5, 201508060109, 3)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (10, 'Ive been to many art places all around the US and this tour was pretty decent. I would recommend tour takers to not take too much time on each stop because you might miss the Dinner at Purple Pig. We almost missed it because we started the tour late, but we made it and it was one of the best!', 4, 201508070109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (10, 'The tour maker obviously has a different art taste from us. We didnt like the Art Institute.', 3, 201508080109, 4)")
 
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (11, 'We went up the skydeck with the glass elevator. DO NOT look down. Skip the skydeck if youre afraid of height.', 5, 201508040109, 3)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (11, 'Would come back to Chicago. Thanks for making a great tour.', 4, 201508020109, 1)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (11, 'The tour was awesome. The Skydeck was a new experience.', 5, 201508030109, 4)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (11, 'We went up the skydeck with the glass elevator. DO NOT look down. Skip the skydeck if youre afraid of height.', 5, 201508050109, 3)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (11, 'Would come back to Chicago. Thanks for making a great tour.', 4, 201508060109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (11, 'The tour was awesome. The Skydeck was a new experience.', 5, 201508070109, 4)")
 
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (12, 'I was looking for a food tour in the center of Chicago and this tour gave very good recommendations', 5, 201508040109, 3)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (12, 'I loved the Middle-Eastern sandwich.', 4, 201508020109, 1)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (12, 'Ended going to only two places - The Florentine and BenjYehuda. Would definitely try the remaining restaurants if I come back to Chicago one day.', 5, 201508030109, 4)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (12, 'Ceres Cafe had amazing drinks. ', 5, 201508040109, 3)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (12, 'This tour was amazing. I was full the whole day!', 5, 201508020109, 1)")
-db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (12, 'Bring a lot of money because youll be spending a lot.', 3, 201508030109, 4)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (12, 'The DuSable Bridge was gorgeous. The architecture was beautiful and it wasnt too crowded to take good photos', 5, 201508020109, 3)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (12, 'I sat at Ipsento for a few hours after walking through The Loop. The walk was a little long, but it was a nice tour.', 4, 201508030109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (12, 'The Loop was a great walk. Live music, shopping, and much more. Would recommend this tour for people who want to go shopping.', 5, 201508040109, 4)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (12, 'The Loop was very lively.', 5, 201508050109, 3)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (12, 'We took lots of photos on the DuSable bridge! Great view!', 5, 201508060109, 1)")
+db.execute("INSERT INTO comments (TourID,Comment,Rating,Time,CommenterID) VALUES (12, 'The tour was a little short. Loved the coffee though.', 3, 201508070109, 4)")
 
 
 db.commit()
