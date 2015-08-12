@@ -11,7 +11,7 @@ db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,C
 
 #testing tours below
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('SF Pub Crawl', 'You know what this is.', 3, 2, 4, 1)")
-db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Get To Know Berkeley', 'Berkeley is the number on Public University in the world! Learn more about it while living the life of an undergraduate student.', 5, 1, 3, 1)")
+db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Get To Know SF', 'Berkeley is the number on Public University in the world! Learn more about it while living the life of an undergraduate student.', 1, 1, 3, 3)")
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Downtown Lowdown', 'See what SF Downtown is all about', 5, 2, 4, 1)")
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Heritage of the City', 'Visit the different ethnic areas of SF and experience new cultures', 5, 5, 2, 1)")
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Startup Walk', 'See the tech areas and where all the local techies hang out.', 5, 1, 3, 1)")
