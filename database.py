@@ -11,7 +11,7 @@ db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,C
 
 #testing tours below
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('SF Pub Crawl', 'You know what this is.', 3, 2, 4, 1)")
-db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Get To Know SF', 'Berkeley is the number on Public University in the world! Learn more about it while living the life of an undergraduate student.', 1, 1, 3, 3)")
+db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Get To Know Chicago', 'Berkeley is the number on Public University in the world! Learn more about it while living the life of an undergraduate student.', 1, 1, 3, 3)")
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Downtown Lowdown', 'See what SF Downtown is all about', 5, 2, 4, 1)")
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Heritage of the City', 'Visit the different ethnic areas of SF and experience new cultures', 5, 5, 2, 1)")
 db.execute("INSERT INTO tours (TourName,TourDescription,Rating,Duration,UserID,CityID) VALUES ('Startup Walk', 'See the tech areas and where all the local techies hang out.', 5, 1, 3, 1)")
@@ -55,7 +55,7 @@ db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,C
 
 
 #Berkeley Tour
-db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (5, 'Campanile Views', 1, 'See the whole panoramic view of Berkeley from the top of the Campanile tower', 37.871909, -122.200000, 'http://www.berkeleyside.com/wp-content/uploads/2015/03/campanile_view1.jpg', 2)")
+db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (5, 'Campanile Views', 1, 'See the whole panoramic view of Berkeley from the top of the Campanile tower', -28.497661, 22.851563, 'http://www.networkandsocial.com/simages/chicago.jpg', 2)")
 db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (5, 'Doe Library Reading Room', 2, 'The reading room, or Morrison Library, is one of the most beautiful parts of Doe Library.', 37.872562, -122.200000, 'https://s-media-cache-ak0.pinimg.com/736x/44/c0/6c/44c06c6be4b34436d862f222ac2e9fef.jpg', 2)")
 db.execute("INSERT INTO stops (TourID,Name,TourIndex,Description,Lat,Long,Pic1,Category) VALUES (5, 'Grab a Coffee at FSM', 3, 'Students get tired studying all day, so make sure you grab a drink and a quick snack at the Free Speech Movement Cafe!', 37.872137, -122.200000, 'http://nickm.com/montfort_rettberg/implementation/2004-08-29/Berkeley_California__Free_Speech_Movement_Cafe_1a.jpg', 4)")
 
