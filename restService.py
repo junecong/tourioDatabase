@@ -124,6 +124,38 @@ def get_user(userIdGiven):
 
 
 
+@route('/rating/<no:int>/<rate:int>', method='POST')
+def edit_item(no, rate):
+
+    intno = int(no)
+
+    c.execute('SELECT Rating,RatingNum FROM tours WHERE id = (?)', (intno,))
+
+
+    ratinglist = [dict((c.description[i][0], value) \
+        for i, value in enumerate(row)) for row in c.fetchall()]
+
+    oldrating =  ratinglist[0].get('Rating')
+    oldratingnum = ratinglist[0].get('RatingNum')
+
+
+    newratingnum = int(oldratingnum) + 1
+
+    newrating = rate
+
+    intnew = (((oldrating * oldratingnum) + newrating) / newratingnum)
+
+    c.execute("UPDATE tours SET RatingNum = ? WHERE id LIKE ?", (newratingnum, no))
+    c.execute("UPDATE tours SET Rating = ? WHERE id LIKE ?", (newrating, no))
+
+
+    print newrating
+    print intnew
+    print newratingnum
+
+    return 'Success'
+
+
 
 #run this shit
 run(host='0.0.0.0', port=5000)
