@@ -149,10 +149,6 @@ def edit_item(no, rate):
     c.execute("UPDATE tours SET Rating = ? WHERE id LIKE ?", (newrating, no))
 
 
-    print newrating
-    print intnew
-    print newratingnum
-
     return 'Success'
 
 
